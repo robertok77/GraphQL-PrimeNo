@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>Tests.GraphQL_PrimeNo</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="coverlet.msbuild" Version="3.2.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+		<PackageReference Include="Shouldly" Version="4.1.0" />
+		<PackageReference Include="xunit" Version="2.4.2" />
+
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+		<PackageReference Include="Moq" Version="4.18.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.*" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.*" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\ServerAPI\ServerAPI.GraphQL-PrimeNo\ServerAPI.GraphQL-PrimeNo.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Shouldly" />
+		<Using Include="Xunit" />
+	</ItemGroup>
+</Project>

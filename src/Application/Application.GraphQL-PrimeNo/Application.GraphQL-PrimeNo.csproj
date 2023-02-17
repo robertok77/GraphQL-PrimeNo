@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>Application.GraphQL_PrimeNo</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GraphQL" Version="7.1.1" />
+		<PackageReference Include="System.Reactive" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Domain\Domain.PrimeNumbers.csproj" />
+		<ProjectReference Include="..\Application.PrimeNumbers\Application.PrimeNumbers.csproj" />
+	</ItemGroup>
+</Project>

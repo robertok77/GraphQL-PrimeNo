@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
+		<Description>GraphQL Playground integration for ASP.NET Core</Description>
+		<PackageTags>GraphQL;Playground</PackageTags>
+		<AssemblyName>GraphQL.Server.$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>GraphQL.Server.$(MSBuildProjectName)</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Internal\playground.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.3" />
+	</ItemGroup>
+
+</Project>
